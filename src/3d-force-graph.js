@@ -1,8 +1,12 @@
 import { AmbientLight, DirectionalLight, Vector3, REVISION } from 'three';
+import * as THREE from 'three';
 
 const three = window.THREE
   ? window.THREE // Prefer consumption from global THREE, if exists
   : { AmbientLight, DirectionalLight, Vector3, REVISION };
+
+// Expose the imported three.js to global environment
+window.THREE = THREE;
 
 import { DragControls as ThreeDragControls } from 'three/examples/jsm/controls/DragControls.js';
 
