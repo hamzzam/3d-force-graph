@@ -1,5 +1,6 @@
 import { AmbientLight, DirectionalLight, Vector3, REVISION } from 'three';
 import * as THREE from 'three';
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
 const three = window.THREE
   ? window.THREE // Prefer consumption from global THREE, if exists
@@ -7,6 +8,8 @@ const three = window.THREE
 
 // Expose the imported three.js to global environment
 window.THREE = THREE;
+window.OrbitControls = OrbitControls; // Expose OrbitControls to THREE
+
 
 import { DragControls as ThreeDragControls } from 'three/examples/jsm/controls/DragControls.js';
 
